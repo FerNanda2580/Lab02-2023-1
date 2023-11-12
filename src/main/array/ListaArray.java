@@ -67,13 +67,30 @@ public class ListaArray implements EstruturaElementar{
 
     @Override
     public int predecessor(int valor) {
-        return -1;
+        for (int i = 0; i < indice_fim; i++) {
+            if (array[i] == valor) {
+                if (i > 0) {
+                    return array[i - 1];
+                    return -1; 
+                }
+            }
+        }
+        return -1; 
         
     }
 
     @Override
     public int sucessor(int valor) {
-       return -1;
+        for (int i = 0; i < indice_fim; i++) {
+            if (array[i] == valor) {
+                if (i < indice_fim - 1) {
+                    return array[i + 1]; 
+                } else {
+                    return -1; 
+                }
+            }
+        }
+        return -1; 
     }
 
     @Override
